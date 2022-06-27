@@ -3,4 +3,10 @@
     <string name="plus">plus</string>
     <string name="divide">divide</string>
     <string name="result">result</string>
+    <string name="numerator">2</string>
+    <string name="resulto">Result</string>
+    <string name="clear">clear</string>
+    <string name="eingabewert_1">Eingabewert 1</string>
+    <string name="eingabewert_2">Eingabewert 2</string>
+    <string name="endergebnis">Endergebnis</string>
 </resources>
