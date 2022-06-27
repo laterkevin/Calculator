@@ -19,23 +19,23 @@ class MainActivity : AppCompatActivity() {
         setContentView(R.layout.activity_main)
         val binding: ActivityMainBinding =
             DataBindingUtil.setContentView(this, R.layout.activity_main)
-
+        var operator = ""
 
         //plus function
         binding.plusButton.setOnClickListener {
-
+            operator = "+"
         }
 
         //dividor function
-        binding.plusButton.setOnClickListener {
-
+        binding.dividorButton.setOnClickListener {
+            operator = "/"
         }
 
         //clear function
         binding.clearButton.setOnClickListener {
             binding.eingabewert1.setText("")
             binding.eingabewert2.setText("")
-            binding.endergebnis.setText("")
+            binding.endergebnis.text = ""
         }
 
         //equal function
@@ -43,8 +43,16 @@ class MainActivity : AppCompatActivity() {
             var wert1 = binding.eingabewert1.text.toString().toInt()
             var wert2 = binding.eingabewert2.text.toString().toInt()
 
-            var ergebnis = wert1 + wert2
-            binding.endergebnis.text = ergebnis.toString()
+            when (operator) {
+                "+" -> {
+                    var ergebnis = wert1 + wert2
+                    binding.endergebnis.text = ergebnis.toString()
+                }
+                "/" -> {
+                    var ergebnis = wert1 / wert2
+                    binding.endergebnis.text = ergebnis.toString()
+                }
+            }
 
         }
 
