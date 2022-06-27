@@ -42,18 +42,23 @@ class MainActivity : AppCompatActivity() {
         binding.resultButton.setOnClickListener {
             var wert1 = binding.eingabewert1.text.toString().toInt()
             var wert2 = binding.eingabewert2.text.toString().toInt()
+            try {
+                when (operator) {
+                    "+" -> {
+                        var ergebnis = wert1 + wert2
+                        binding.endergebnis.text = ergebnis.toString()
+                    }
+                    "/" -> {
+                        var ergebnis = wert1 / wert2
+                        binding.endergebnis.text = ergebnis.toString()
+                    }
 
-            when (operator) {
-                "+" -> {
-                    var ergebnis = wert1 + wert2
-                    binding.endergebnis.text = ergebnis.toString()
                 }
-                "/" -> {
-                    var ergebnis = wert1 / wert2
-                    binding.endergebnis.text = ergebnis.toString()
-                }
+
+            } catch (e: Exception) {
+                binding.endergebnis.text = "Nicht durch 0 teilbar!"
+
             }
-
         }
 
     }
