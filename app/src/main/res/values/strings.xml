@@ -9,4 +9,6 @@
     <string name="eingabewert_1">Eingabewert 1</string>
     <string name="eingabewert_2">Eingabewert 2</string>
     <string name="endergebnis">Endergebnis</string>
+    <string name="zaehler">Zähler</string>
+    <string name="nenner">Nenner</string>
 </resources>

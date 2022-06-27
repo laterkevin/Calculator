@@ -1,104 +1,124 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    tools:context=".MainActivity">
+    xmlns:tools="http://schemas.android.com/tools">
 
-    <TextView
-        android:id="@+id/denominator"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/eingabewert_1"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.311" />
+    <data>
 
-    <TextView
-        android:id="@+id/numerator"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/eingabewert_2"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/denominator"
-        app:layout_constraintVertical_bias="0.091" />
+    </data>
 
-    <TextView
-        android:id="@+id/resulto"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/endergebnis"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/numerator"
-        app:layout_constraintVertical_bias="0.413" />
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".MainActivity">
 
-    <Button
-        android:id="@+id/plus_button"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="76dp"
-        android:text="@string/plus"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.114"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        tools:text="+" />
+        <Button
+            android:id="@+id/plus_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="32dp"
+            android:text="@string/plus"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.114"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:text="+" />
 
-    <Button
-        android:id="@+id/dividor_button"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="8dp"
-        android:text="@string/divide"
-        app:layout_constraintEnd_toEndOf="@+id/plus_button"
-        app:layout_constraintStart_toStartOf="@+id/plus_button"
-        app:layout_constraintTop_toBottomOf="@+id/plus_button"
-        tools:text="/" />
+        <Button
+            android:id="@+id/dividor_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:text="@string/divide"
+            app:layout_constraintEnd_toEndOf="@+id/plus_button"
+            app:layout_constraintStart_toStartOf="@+id/plus_button"
+            app:layout_constraintTop_toBottomOf="@+id/plus_button"
+            tools:text="/" />
 
-    <Button
-        android:id="@+id/result_button"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="416dp"
-        android:text="@string/result"
-        app:layout_constraintEnd_toEndOf="@+id/dividor_button"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="@+id/dividor_button"
-        app:layout_constraintTop_toBottomOf="@+id/dividor_button"
-        tools:ignore="DuplicateSpeakableTextCheck"
-        tools:text="=" />
+        <Button
+            android:id="@+id/result_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="416dp"
+            android:text="@string/result"
+            app:layout_constraintEnd_toEndOf="@+id/dividor_button"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="@+id/dividor_button"
+            app:layout_constraintTop_toBottomOf="@+id/dividor_button"
+            tools:ignore="DuplicateSpeakableTextCheck"
+            tools:text="=" />
 
-    <Button
-        android:id="@+id/clear_button"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/clear"
-        app:layout_constraintBottom_toBottomOf="@+id/result_button"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.767"
-        app:layout_constraintStart_toEndOf="@+id/result_button"
-        app:layout_constraintTop_toTopOf="@+id/result_button"
-        tools:text="clear" />
+        <Button
+            android:id="@+id/clear_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/clear"
+            app:layout_constraintBottom_toBottomOf="@+id/result_button"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.823"
+            app:layout_constraintStart_toEndOf="@+id/result_button"
+            app:layout_constraintTop_toTopOf="@+id/result_button"
+            app:layout_constraintVertical_bias="0.0"
+            tools:text="clear" />
 
-    <View
-        android:id="@+id/divider"
-        android:layout_width="409dp"
-        android:layout_height="1dp"
-        android:background="?android:attr/listDivider"
-        android:backgroundTint="#673AB7"
-        android:backgroundTintMode="add"
-        app:layout_constraintBottom_toTopOf="@+id/resulto"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/numerator"
-        app:layout_constraintVertical_bias="0.761" />
+        <View
+            android:id="@+id/divider"
+            android:layout_width="409dp"
+            android:layout_height="1dp"
+            android:background="?android:attr/listDivider"
+            android:backgroundTint="#673AB7"
+            android:backgroundTintMode="add"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.584" />
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+        <EditText
+            android:id="@+id/eingabewert_1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="92dp"
+            android:ems="10"
+            android:hint="@string/nenner"
+            android:inputType="number"
+            android:minHeight="48dp"
+            android:textAlignment="center"
+            android:textColorHint="#757575"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.497"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/dividor_button"
+            android:importantForAutofill="no" />
+
+        <EditText
+            android:id="@+id/eingabewert_2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="32dp"
+            android:ems="10"
+            android:hint="@string/zaehler"
+            android:inputType="number"
+            android:minHeight="48dp"
+            android:textAlignment="center"
+            android:textColorHint="#757575"
+            app:layout_constraintEnd_toEndOf="@+id/eingabewert_1"
+            app:layout_constraintStart_toStartOf="@+id/eingabewert_1"
+            app:layout_constraintTop_toBottomOf="@+id/eingabewert_1"
+            android:importantForAutofill="no" />
+
+        <TextView
+            android:id="@+id/endergebnis"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="32dp"
+            android:hint="@string/endergebnis"
+            android:textAlignment="center"
+            android:textColorHint="#757575"
+            android:textSize="24sp"
+            app:layout_constraintEnd_toEndOf="@+id/eingabewert_2"
+            app:layout_constraintStart_toStartOf="@+id/eingabewert_2"
+            app:layout_constraintTop_toBottomOf="@+id/divider" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>
